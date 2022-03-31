@@ -1,0 +1,121 @@
+@mixin displayGrid($numOfRows, $numOfColumns, $Area, $gap) {
+    display: grid;
+    grid-template-rows: repeat($numOfRows, auto);
+    grid-template-columns: $numOfColumns;
+    grid-template-areas: $Area;
+    gap: $gap;
+}
+
+@mixin displayFlex($flex-direc, $wrap, $justify, $align) {
+    display: flex;
+    flex-flow: $flex-direc $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+// Grid's cells and symbols Styles
+@mixin symbolStyle($bg-clr, $br-radius, $mrgn, $clr, $fnt-size) {
+    background-color: $bg-clr;
+    border-radius: $br-radius;
+    margin: $mrgn;
+    color: $clr;
+    font-size: $fnt-size;
+}
+
+// Main styles used by media queries
+@mixin mainStyles($cnt1-wdth, $fnt-sze, $cnt2-mrgn, $plyrs-wdth, $plyr-wdth, $grd-wdth, $grd-mrgn, $rw-hgt, $cll-wdth, $win-fnt, $win-top) {
+    div {
+        &.cont1 {
+            width: $cnt1-wdth;
+            .turn1, .turn2 {
+                font-size: $fnt-sze;
+            }
+        }
+        &.cont2 {
+            margin: $cnt2-mrgn 0;
+            div {
+                &.plyrs {
+                    width: $plyrs-wdth;
+                    .plyr1, .plyr2 {
+                        width: $plyr-wdth;
+                        p {
+                            font-size: $fnt-sze;
+                        }
+                        .choice {
+                            i {
+                                &.fa-xmark {
+                                    font-size: $fnt-sze + 0.5rem;
+                                }
+                                &.fa-circle {
+                                    font-size: $fnt-sze + 0.25rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.grid {
+                    width: $grd-wdth;
+                    margin: $grd-mrgn 0;
+                    div {
+                        &.row {
+                            height: $rw-hgt;
+                            div {
+                                width: $cll-wdth;
+                                .content {
+                                    &.x {
+                                        font-size: $fnt-sze + 0.5rem;
+                                    }
+                                    &.o {
+                                        font-size: $fnt-sze + 0.25rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.winner {
+            font-size: $win-fnt;
+            top: $win-top;
+        }
+    }
+}
+
+// Footer styles used by media queries
+@mixin footerStyles($p-font, $div-width, $i-font) {
+    p {
+        font-size: $p-font;
+    }
+    div {
+        width: $div-width;
+        i {
+            font-size: $i-font;
+        }
+    }
+}
+
+/* Media Queries */
+@mixin narrowScreens($mx-width) { /* narrow mobile screens */
+    @media only screen and (max-width: $mx-width) {
+        @content;
+    }
+}
+
+@mixin flippedScreens($mn-width, $mx-width, $mn-height, $mx-height) { /* rotated mobile screens */
+    @media only screen and (min-width: $mn-width) and (max-width: $mx-width) and (min-height: $mn-height) and (max-height: $mx-height) {
+        @content;
+    }
+}
+
+@mixin padScreens($mn-width, $mx-width, $mn-height) { /* vertical pads */
+    @media only screen and (min-width: $mn-width) and (max-width: $mx-width) and (min-height: $mn-height) {
+        @content;
+    }
+}
+
+@mixin wideScreens($mn-width, $mn-height) { /* flippedPads, Laptops, Desktops */
+    @media only screen and (min-width: $mn-width) and (min-height: $mn-height) {
+        @content;
+    }
+}

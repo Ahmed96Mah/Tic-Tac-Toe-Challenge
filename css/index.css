@@ -1,0 +1,619 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap");
+/* Media Queries */
+/* Page Colors */
+header {
+  min-height: 10vh;
+  /* Media Queries */
+  /* narrow mobile screens */
+  /* rotated mobile screens */
+  /* vertical pads */
+  /* flippedPads, Laptops, Desktops */
+}
+header h1 {
+  color: white;
+  font-family: "Lobster Two", cursive;
+  text-align: center;
+  font-size: 1.65rem;
+  padding-top: 1.5rem;
+}
+@media only screen and (max-width: 20.625rem) {
+  header h1 {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 41.25rem) and (max-width: 59.375rem) and (min-height: 21.25rem) and (max-height: 28.125rem) {
+  header h1 {
+    font-size: 1.9rem;
+  }
+}
+@media only screen and (min-width: 40.625rem) and (max-width: 68.75rem) and (min-height: 62.5rem) {
+  header {
+    min-height: 15vh;
+  }
+  header h1 {
+    font-size: 2.35rem;
+  }
+}
+@media only screen and (min-width: 62.5rem) and (min-height: 31.25rem) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+}
+
+main {
+  font-size: 1rem;
+  min-height: 50vh;
+  /* Media Queries */
+  /* narrow mobile screens */
+  /* rotated mobile screens */
+  /* vertical pads */
+  /* flippedPads, Laptops, Desktops */
+}
+main div.cont1 {
+  width: 100%;
+  margin: 1rem 0;
+  font-family: "Alfa Slab One", cursive;
+}
+main div.cont1 #turn1, main div.cont1 #turn2 {
+  margin: 0.5rem 0;
+  color: darkgray;
+  font-size: 1.4rem;
+}
+main div.cont1 #turn1.hglt, main div.cont1 #turn2.hglt {
+  color: wheat;
+}
+main div.cont2 {
+  width: 100%;
+  margin: 1rem 0;
+}
+main div.cont2 div.plyrs {
+  color: wheat;
+  font-family: "Roboto", sans-serif;
+  width: 17rem;
+}
+main div.cont2 div.plyrs .plyr1, main div.cont2 div.plyrs .plyr2 {
+  width: 4rem;
+}
+main div.cont2 div.plyrs .plyr1 p, main div.cont2 div.plyrs .plyr2 p {
+  font-weight: bold;
+}
+main div.cont2 div.plyrs .plyr1 .choice, main div.cont2 div.plyrs .plyr2 .choice {
+  width: 100%;
+  padding: 0.8rem 0;
+}
+main div.cont2 div.plyrs .plyr1 .choice i, main div.cont2 div.plyrs .plyr2 .choice i {
+  color: wheat;
+  padding: 0.2em;
+  cursor: pointer;
+}
+main div.cont2 div.plyrs .plyr1 .choice i.fa-circle, main div.cont2 div.plyrs .plyr2 .choice i.fa-circle {
+  font-size: 1.25rem;
+}
+main div.cont2 div.plyrs .plyr1 .choice i.fa-xmark, main div.cont2 div.plyrs .plyr2 .choice i.fa-xmark {
+  font-size: 1.5rem;
+}
+main div.cont2 div.plyrs .plyr1 .choice i.fa-cir, main div.cont2 div.plyrs .plyr2 .choice i.fa-cir {
+  color: #006600;
+}
+main div.cont2 div.plyrs .plyr1 .choice i.fa-x, main div.cont2 div.plyrs .plyr2 .choice i.fa-x {
+  color: darkred;
+}
+main div.cont2 div.plyrs .plyr1 .choice i.not-allowed, main div.cont2 div.plyrs .plyr2 .choice i.not-allowed {
+  cursor: not-allowed;
+}
+main div.cont2 div.grid {
+  width: 18rem;
+  margin: 3rem 0;
+  opacity: 100;
+  transition: opacity 2s ease-in-out;
+  z-index: 0;
+}
+main div.cont2 div.grid div.row {
+  height: 6rem;
+}
+main div.cont2 div.grid div.row div {
+  width: 6rem;
+}
+main div.cont2 div.grid div.row div.mid {
+  border-right: 0.25rem solid wheat;
+  border-left: 0.25rem solid wheat;
+}
+main div.cont2 div.grid div.row div .content {
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+main div.cont2 div.grid div.row div .content:hover {
+  background-color: rgba(155, 155, 155, 0.308);
+  border-radius: 4rem;
+  margin: 0.25rem;
+}
+main div.cont2 div.grid div.row div .content.x {
+  background-color: darkred;
+  border-radius: 4rem;
+  margin: 0.25rem;
+  color: white;
+  font-size: 2rem;
+}
+main div.cont2 div.grid div.row div .content.o {
+  background-color: #006600;
+  border-radius: 4rem;
+  margin: 0.25rem;
+  color: white;
+  font-size: 1.75rem;
+}
+main div.cont2 div.grid div#row2 {
+  border-top: 0.25rem solid wheat;
+  border-bottom: 0.25rem solid wheat;
+}
+main div.cont2 div.grid div.bar {
+  position: relative;
+  height: 0.25rem;
+  border-radius: 1rem;
+  background-color: wheat;
+  width: 100%;
+  max-width: 0%;
+  transition: max-width 2s ease-in-out;
+}
+main div.cont2 div.grid div.bar.hide {
+  visibility: hidden;
+}
+main div.cont2 div.grid div.bar.horz-1 {
+  top: 17%;
+  max-width: 100%;
+}
+main div.cont2 div.grid div.bar.horz-2 {
+  top: 50%;
+  max-width: 100%;
+}
+main div.cont2 div.grid div.bar.horz-3 {
+  top: 83%;
+  max-width: 100%;
+}
+main div.cont2 div.grid div.bar.vert-1 {
+  top: 50%;
+  right: 33%;
+  transform: rotate(90deg);
+  max-width: 100%;
+}
+main div.cont2 div.grid div.bar.vert-2 {
+  top: 50%;
+  left: 1%;
+  transform: rotate(90deg);
+  max-width: 100%;
+}
+main div.cont2 div.grid div.bar.vert-3 {
+  top: 50%;
+  left: 36%;
+  transform: rotate(90deg);
+  max-width: 100%;
+}
+main div.cont2 div.grid div.bar.deg-1 {
+  width: 130%;
+  top: 50%;
+  right: 13%;
+  transform: rotate(45deg);
+  max-width: 130%;
+}
+main div.cont2 div.grid div.bar.deg-2 {
+  width: 130%;
+  top: 50%;
+  right: 13%;
+  transform: rotate(135deg);
+  max-width: 130%;
+}
+main div.cont2 div.grid.hide {
+  opacity: 0;
+}
+main div.winner {
+  z-index: 1;
+  font-size: 2.3rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 3rem;
+  position: fixed;
+  background: linear-gradient(220deg, #000653, #008caf);
+  color: white;
+  font-weight: bold;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  top: 35vh;
+}
+main div.winner.hide {
+  display: none;
+}
+@media only screen and (max-width: 20.625rem) {
+  main {
+    /* ($mx-width) */
+    /* ($cnt1-wdth, $fnt-sze, $cnt2-mrgn, $plyrs-wdth, $plyr-wdth, $grd-wdth, $grd-mrgn, $rw-hgt, $cll-wdth, $win-fnt, $win-top) */
+  }
+  main div.cont1 {
+    width: 100%;
+  }
+  main div.cont1 .turn1, main div.cont1 .turn2 {
+    font-size: 1rem;
+  }
+  main div.cont2 {
+    margin: 1rem 0;
+  }
+  main div.cont2 div.plyrs {
+    width: 12rem;
+  }
+  main div.cont2 div.plyrs .plyr1, main div.cont2 div.plyrs .plyr2 {
+    width: 3.9rem;
+  }
+  main div.cont2 div.plyrs .plyr1 p, main div.cont2 div.plyrs .plyr2 p {
+    font-size: 1rem;
+  }
+  main div.cont2 div.plyrs .plyr1 .choice i.fa-xmark, main div.cont2 div.plyrs .plyr2 .choice i.fa-xmark {
+    font-size: 1.5rem;
+  }
+  main div.cont2 div.plyrs .plyr1 .choice i.fa-circle, main div.cont2 div.plyrs .plyr2 .choice i.fa-circle {
+    font-size: 1.25rem;
+  }
+  main div.cont2 div.grid {
+    width: 12rem;
+    margin: 3rem 0;
+  }
+  main div.cont2 div.grid div.row {
+    height: 4rem;
+  }
+  main div.cont2 div.grid div.row div {
+    width: 4rem;
+  }
+  main div.cont2 div.grid div.row div .content.x {
+    font-size: 1.5rem;
+  }
+  main div.cont2 div.grid div.row div .content.o {
+    font-size: 1.25rem;
+  }
+  main div.winner {
+    font-size: 1.6rem;
+    top: 35vh;
+  }
+}
+@media only screen and (min-width: 41.25rem) and (max-width: 59.375rem) and (min-height: 21.25rem) and (max-height: 28.125rem) {
+  main {
+    /* ($mn-width, $mx-width, $mn-height, $mx-height) */
+    min-height: 25vh;
+    /* ($cnt1-wdth, $fnt-sze, $cnt2-mrgn, $plyrs-wdth, $plyr-wdth, $grd-wdth, $grd-mrgn, $rw-hgt, $cll-wdth, $win-fnt, $win-top) */
+  }
+  main div.cont1 {
+    width: 80%;
+  }
+  main div.cont1 .turn1, main div.cont1 .turn2 {
+    font-size: 1.3rem;
+  }
+  main div.cont2 {
+    margin: 0 0;
+  }
+  main div.cont2 div.plyrs {
+    width: 21rem;
+  }
+  main div.cont2 div.plyrs .plyr1, main div.cont2 div.plyrs .plyr2 {
+    width: 5rem;
+  }
+  main div.cont2 div.plyrs .plyr1 p, main div.cont2 div.plyrs .plyr2 p {
+    font-size: 1.3rem;
+  }
+  main div.cont2 div.plyrs .plyr1 .choice i.fa-xmark, main div.cont2 div.plyrs .plyr2 .choice i.fa-xmark {
+    font-size: 1.8rem;
+  }
+  main div.cont2 div.plyrs .plyr1 .choice i.fa-circle, main div.cont2 div.plyrs .plyr2 .choice i.fa-circle {
+    font-size: 1.55rem;
+  }
+  main div.cont2 div.grid {
+    width: 21rem;
+    margin: 3rem 0;
+  }
+  main div.cont2 div.grid div.row {
+    height: 7rem;
+  }
+  main div.cont2 div.grid div.row div {
+    width: 7rem;
+  }
+  main div.cont2 div.grid div.row div .content.x {
+    font-size: 1.8rem;
+  }
+  main div.cont2 div.grid div.row div .content.o {
+    font-size: 1.55rem;
+  }
+  main div.winner {
+    font-size: 1.8rem;
+    top: 30vh;
+  }
+}
+@media only screen and (min-width: 40.625rem) and (max-width: 68.75rem) and (min-height: 62.5rem) {
+  main {
+    /* ($mn-width, $mx-width, $mn-height) */
+    min-height: 55vh;
+    /* ($cnt1-wdth, $fnt-sze, $cnt2-mrgn, $plyrs-wdth, $plyr-wdth, $grd-wdth, $grd-mrgn, $rw-hgt, $cll-wdth, $win-fnt, $win-top) */
+  }
+  main div.cont1 {
+    width: 80%;
+  }
+  main div.cont1 .turn1, main div.cont1 .turn2 {
+    font-size: 1.6rem;
+  }
+  main div.cont2 {
+    margin: 1rem 0;
+  }
+  main div.cont2 div.plyrs {
+    width: 27rem;
+  }
+  main div.cont2 div.plyrs .plyr1, main div.cont2 div.plyrs .plyr2 {
+    width: 6rem;
+  }
+  main div.cont2 div.plyrs .plyr1 p, main div.cont2 div.plyrs .plyr2 p {
+    font-size: 1.6rem;
+  }
+  main div.cont2 div.plyrs .plyr1 .choice i.fa-xmark, main div.cont2 div.plyrs .plyr2 .choice i.fa-xmark {
+    font-size: 2.1rem;
+  }
+  main div.cont2 div.plyrs .plyr1 .choice i.fa-circle, main div.cont2 div.plyrs .plyr2 .choice i.fa-circle {
+    font-size: 1.85rem;
+  }
+  main div.cont2 div.grid {
+    width: 24rem;
+    margin: 3rem 0;
+  }
+  main div.cont2 div.grid div.row {
+    height: 8rem;
+  }
+  main div.cont2 div.grid div.row div {
+    width: 8rem;
+  }
+  main div.cont2 div.grid div.row div .content.x {
+    font-size: 2.1rem;
+  }
+  main div.cont2 div.grid div.row div .content.o {
+    font-size: 1.85rem;
+  }
+  main div.winner {
+    font-size: 2.7rem;
+    top: 40vh;
+  }
+}
+@media only screen and (min-width: 62.5rem) and (min-height: 31.25rem) {
+  main {
+    /* ($mn-width, $mn-height) */
+    /* ($cnt1-wdth, $fnt-sze, $cnt2-mrgn, $plyrs-wdth, $plyr-wdth, $grd-wdth, $grd-mrgn, $rw-hgt, $cll-wdth, $win-fnt, $win-top) */
+  }
+  main div.cont1 {
+    width: 60%;
+  }
+  main div.cont1 .turn1, main div.cont1 .turn2 {
+    font-size: 1.75rem;
+  }
+  main div.cont2 {
+    margin: 1rem 0;
+  }
+  main div.cont2 div.plyrs {
+    width: 30rem;
+  }
+  main div.cont2 div.plyrs .plyr1, main div.cont2 div.plyrs .plyr2 {
+    width: 8rem;
+  }
+  main div.cont2 div.plyrs .plyr1 p, main div.cont2 div.plyrs .plyr2 p {
+    font-size: 1.75rem;
+  }
+  main div.cont2 div.plyrs .plyr1 .choice i.fa-xmark, main div.cont2 div.plyrs .plyr2 .choice i.fa-xmark {
+    font-size: 2.25rem;
+  }
+  main div.cont2 div.plyrs .plyr1 .choice i.fa-circle, main div.cont2 div.plyrs .plyr2 .choice i.fa-circle {
+    font-size: 2rem;
+  }
+  main div.cont2 div.grid {
+    width: 24rem;
+    margin: 3rem 0;
+  }
+  main div.cont2 div.grid div.row {
+    height: 8rem;
+  }
+  main div.cont2 div.grid div.row div {
+    width: 8rem;
+  }
+  main div.cont2 div.grid div.row div .content.x {
+    font-size: 2.25rem;
+  }
+  main div.cont2 div.grid div.row div .content.o {
+    font-size: 2rem;
+  }
+  main div.winner {
+    font-size: 2.9rem;
+    top: 40vh;
+  }
+}
+
+footer {
+  color: wheat;
+  min-height: 20vh;
+  margin-top: 1.5rem;
+  /* Media Queries */
+  /* narrow mobile screens */
+  /* rotated mobile screens */
+  /* vertical pads */
+  /* flippedPads, Laptops, Desktops */
+}
+footer p {
+  font-size: 1.2rem;
+  font-family: "Lobster Two", cursive;
+}
+footer div {
+  width: 20rem;
+  padding: 1rem 0;
+}
+footer div i {
+  cursor: pointer;
+  font-size: 2.2rem;
+  color: wheat;
+}
+footer div i.fa-beat-style {
+  --fa-beat-fade-opacity: 0.1;
+  --fa-beat-fade-scale: 1.25;
+}
+@media only screen and (max-width: 20.625rem) {
+  footer p {
+    font-size: 0.9rem;
+  }
+  footer div {
+    width: 16rem;
+  }
+  footer div i {
+    font-size: 1.7rem;
+  }
+}
+@media only screen and (min-width: 41.25rem) and (max-width: 59.375rem) and (min-height: 21.25rem) and (max-height: 28.125rem) {
+  footer p {
+    font-size: 1.2rem;
+  }
+  footer div {
+    width: 20rem;
+  }
+  footer div i {
+    font-size: 2.2rem;
+  }
+}
+@media only screen and (min-width: 40.625rem) and (max-width: 68.75rem) and (min-height: 62.5rem) {
+  footer {
+    margin-top: 2.5rem;
+  }
+  footer p {
+    font-size: 1.8rem;
+  }
+  footer div {
+    width: 25rem;
+  }
+  footer div i {
+    font-size: 2.8em;
+  }
+}
+@media only screen and (min-width: 62.5rem) and (min-height: 31.25rem) {
+  footer p {
+    font-size: 1.8rem;
+  }
+  footer div {
+    width: 25rem;
+  }
+  footer div i {
+    font-size: 2.8em;
+  }
+}
+
+/* Page layout styles */
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #9e3799, #3675bd);
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 1fr;
+  grid-template-areas: "hdr" "mn" "ftr";
+  gap: 1rem;
+}
+body header {
+  grid-area: hdr;
+}
+body main {
+  grid-area: mn;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: stretch;
+  align-items: center;
+  /* Media Queries */
+  /* rotated mobile screens */
+  /* vertical pads */
+  /* flippedPads, Laptops, Desktops */
+}
+body main div.cont1 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: stretch;
+  align-items: center;
+}
+body main div.cont2 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: stretch;
+  align-items: center;
+}
+body main div.cont2 div.plyrs {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+body main div.cont2 div.plyrs .plyr1 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: stretch;
+  align-items: center;
+}
+body main div.cont2 div.plyrs .plyr1 .choice {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+body main div.cont2 div.plyrs .plyr2 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: stretch;
+  align-items: center;
+}
+body main div.cont2 div.plyrs .plyr2 .choice {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+body main div.cont2 div.grid {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: stretch;
+}
+body main div.cont2 div.grid div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: stretch;
+  align-items: stretch;
+}
+@media only screen and (min-width: 41.25rem) and (max-width: 59.375rem) and (min-height: 21.25rem) and (max-height: 28.125rem) {
+  body main div.cont1 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}
+@media only screen and (min-width: 40.625rem) and (max-width: 68.75rem) and (min-height: 62.5rem) {
+  body main div.cont1 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}
+@media only screen and (min-width: 62.5rem) and (min-height: 31.25rem) {
+  body main div.cont1 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}
+body footer {
+  grid-area: ftr;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: stretch;
+  align-items: center;
+}
+body footer div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+}

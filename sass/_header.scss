@@ -1,0 +1,41 @@
+@use 'mixins' as m;
+@use 'variables' as v;
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+
+header {
+    min-height: 10vh;
+    h1 {
+        color: v.$white-clr;
+        font-family: 'Lobster Two', cursive;
+        text-align: center;
+        font-size: 1.65rem;
+        padding-top: 1.5rem;
+    }
+
+    /* Media Queries */
+    @include m.narrowScreens(20.625rem) {
+        h1 {
+            font-size: 1.3rem;
+        }
+    }
+
+    @include m.flippedScreens(41.25rem, 59.375rem, 21.25rem, 28.125rem) {
+        h1 {
+            font-size: 1.9rem;
+        }
+    }
+
+    @include m.padScreens(40.625rem, 68.75rem, 62.5rem) {
+        min-height: 15vh;
+        h1 {
+            font-size: 2.35rem;
+        }
+    }
+
+    @include m.wideScreens(62.5rem, 31.25rem) {
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+}
