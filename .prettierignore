@@ -1,0 +1,11 @@
+# Ignore node_modules folder
+node_modules
+
+# Ignore migrations folder
+migrations
+
+# Ignore spec folder
+spec
+
+# Ignore .json files
+*.json
