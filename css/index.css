@@ -16,8 +16,8 @@ header h1 {
   color: white;
   font-family: "Lobster Two", cursive;
   text-align: center;
-  font-size: 1.65rem;
-  padding-top: 1.5rem;
+  font-size: 2rem;
+  padding-top: 1rem;
 }
 @media only screen and (max-width: 20.625rem) {
   header h1 {
@@ -60,7 +60,7 @@ main div.cont1 {
 main div.cont1 #turn1, main div.cont1 #turn2 {
   margin: 0.5rem 0;
   color: darkgray;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 main div.cont1 #turn1.hglt, main div.cont1 #turn2.hglt {
   color: wheat;
@@ -75,17 +75,20 @@ main div.cont2 div.plyrs {
   width: 17rem;
 }
 main div.cont2 div.plyrs .plyr1, main div.cont2 div.plyrs .plyr2 {
-  width: 4rem;
+  width: 5.5rem;
 }
 main div.cont2 div.plyrs .plyr1 p, main div.cont2 div.plyrs .plyr2 p {
   font-weight: bold;
+}
+main div.cont2 div.plyrs .plyr1 p#count1, main div.cont2 div.plyrs .plyr1 p#count2, main div.cont2 div.plyrs .plyr2 p#count1, main div.cont2 div.plyrs .plyr2 p#count2 {
+  color: white;
 }
 main div.cont2 div.plyrs .plyr1 .choice, main div.cont2 div.plyrs .plyr2 .choice {
   width: 100%;
   padding: 0.8rem 0;
 }
 main div.cont2 div.plyrs .plyr1 .choice i, main div.cont2 div.plyrs .plyr2 .choice i {
-  color: wheat;
+  color: white;
   padding: 0.2em;
   cursor: pointer;
 }
@@ -106,7 +109,7 @@ main div.cont2 div.plyrs .plyr1 .choice i.not-allowed, main div.cont2 div.plyrs 
 }
 main div.cont2 div.grid {
   width: 18rem;
-  margin: 3rem 0;
+  margin: 1.85rem 0;
   opacity: 100;
   transition: opacity 2s ease-in-out;
   z-index: 0;
@@ -118,8 +121,8 @@ main div.cont2 div.grid div.row div {
   width: 6rem;
 }
 main div.cont2 div.grid div.row div.mid {
-  border-right: 0.25rem solid wheat;
-  border-left: 0.25rem solid wheat;
+  border-right: 0.25rem solid white;
+  border-left: 0.25rem solid white;
 }
 main div.cont2 div.grid div.row div .content {
   cursor: pointer;
@@ -146,8 +149,8 @@ main div.cont2 div.grid div.row div .content.o {
   font-size: 1.75rem;
 }
 main div.cont2 div.grid div#row2 {
-  border-top: 0.25rem solid wheat;
-  border-bottom: 0.25rem solid wheat;
+  border-top: 0.25rem solid white;
+  border-bottom: 0.25rem solid white;
 }
 main div.cont2 div.grid div.bar {
   position: relative;
@@ -448,7 +451,7 @@ footer div {
 footer div i {
   cursor: pointer;
   font-size: 2.2rem;
-  color: wheat;
+  color: white;
 }
 footer div i.fa-beat-style {
   --fa-beat-fade-opacity: 0.1;
@@ -505,7 +508,7 @@ footer div i.fa-beat-style {
 /* Page layout styles */
 body {
   margin: 0;
-  background: linear-gradient(135deg, #9e3799, #3675bd);
+  background: darkslategrey;
   display: grid;
   grid-template-rows: repeat(3, auto);
   grid-template-columns: 1fr;
@@ -528,7 +531,7 @@ body main {
 }
 body main div.cont1 {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   justify-content: stretch;
   align-items: center;
 }

@@ -15,7 +15,7 @@ main {
             #turn1, #turn2 {
                 margin: 0.5rem 0;
                 color: v.$dark-gray;
-                font-size: 1.4rem;
+                font-size: 1.2rem;
                 &.hglt {
                     color: v.$wheat-clr;
                 }
@@ -30,15 +30,18 @@ main {
                     font-family: 'Roboto', sans-serif;
                     width: 17rem;
                     .plyr1, .plyr2 {
-                        width: 4rem;
+                        width: 5.5rem;
                         p {
                             font-weight: bold;
+                            &#count1, &#count2 {
+                                color: white;
+                            }
                         }
                         .choice {
                             width: 100%;
                             padding: 0.8rem 0;
                             i {
-                                color: v.$wheat-clr;
+                                color: white;
                                 padding: 0.2em;
                                 cursor: pointer;
                                 &.fa-circle {
@@ -62,7 +65,7 @@ main {
                 }
                 &.grid {
                     width: 18rem;
-                    margin: 3rem 0;
+                    margin: 1.85rem 0;
                     opacity: 100;
                     transition: opacity 2s ease-in-out;
                     z-index: 0;
@@ -72,8 +75,8 @@ main {
                             div {
                                 width: 6rem;
                                 &.mid{
-                                    border-right: 0.25rem solid v.$wheat-clr;
-                                    border-left: 0.25rem solid v.$wheat-clr;
+                                    border-right: 0.25rem solid white;
+                                    border-left: 0.25rem solid white;
                                 }
                                 .content {
                                     cursor: pointer;
@@ -94,8 +97,8 @@ main {
                             }
                         }
                         &#row2 {
-                            border-top: 0.25rem solid v.$wheat-clr;
-                            border-bottom: 0.25rem solid v.$wheat-clr;
+                            border-top: 0.25rem solid white;
+                            border-bottom: 0.25rem solid white;
                         }
                         &.bar {
                             position: relative;

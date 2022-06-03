@@ -7,7 +7,8 @@
 /* Page layout styles */
 body {
     margin: 0;
-    background: linear-gradient(135deg, v.$pg-mn-clr, v.$pg-scdry-clr);
+    background: darkslategrey;
+    //background: linear-gradient(135deg, v.$pg-mn-clr, v.$pg-scdry-clr);
     @include m.displayGrid(3, 1fr, "hdr" "mn" "ftr", 1rem);
     header {
         grid-area: hdr;
@@ -17,7 +18,7 @@ body {
         @include m.displayFlex(column, nowrap, stretch, center);
         div {
             &.cont1 {
-                @include m.displayFlex(column, nowrap, stretch, center);
+                @include m.displayFlex(column, wrap, stretch, center);
             }
             &.cont2 {
                 @include m.displayFlex(column, nowrap, stretch, center);
