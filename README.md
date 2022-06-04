@@ -6,7 +6,7 @@
 
 ### Operational Steps:
 
-1- Both players should choose their symbol (X or O) **first**. If a click is detected on the grid before that an alret is 
+1- Both players should choose their symbol (X or O) **first**. If a click is detected on the grid before that an alret is
 displayed for the players **prompting them to provide their choices**.
 
 2- Once both players provide their selections, players' turns are highlighted above the grid based on the current turn.
