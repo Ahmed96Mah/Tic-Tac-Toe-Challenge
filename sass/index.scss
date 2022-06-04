@@ -6,78 +6,78 @@
 
 /* Page layout styles */
 body {
-    margin: 0;
-    background: darkslategrey;
-    //background: linear-gradient(135deg, v.$pg-mn-clr, v.$pg-scdry-clr);
-    @include m.displayGrid(3, 1fr, "hdr" "mn" "ftr", 1rem);
-    header {
-        grid-area: hdr;
-    }
-    main {
-        grid-area: mn;
+  margin: 0;
+  background: darkslategrey;
+  //background: linear-gradient(135deg, v.$pg-mn-clr, v.$pg-scdry-clr);
+  @include m.displayGrid(3, 1fr, 'hdr' 'mn' 'ftr', 1rem);
+  header {
+    grid-area: hdr;
+  }
+  main {
+    grid-area: mn;
+    @include m.displayFlex(column, nowrap, stretch, center);
+    div {
+      &.cont1 {
+        @include m.displayFlex(column, wrap, stretch, center);
+      }
+      &.cont2 {
         @include m.displayFlex(column, nowrap, stretch, center);
         div {
-            &.cont1 {
-                @include m.displayFlex(column, wrap, stretch, center);
+          &.plyrs {
+            @include m.displayFlex(row, nowrap, space-between, stretch);
+            .plyr1 {
+              @include m.displayFlex(column, nowrap, stretch, center);
+              .choice {
+                @include m.displayFlex(row, nowrap, space-between, center);
+              }
             }
-            &.cont2 {
-                @include m.displayFlex(column, nowrap, stretch, center);
-                div {
-                    &.plyrs{
-                        @include m.displayFlex(row, nowrap, space-between, stretch);
-                        .plyr1 {
-                            @include m.displayFlex(column, nowrap, stretch, center);
-                            .choice {
-                                @include m.displayFlex(row, nowrap, space-between, center);
-                            }
-                        }
-                        .plyr2 {
-                            @include m.displayFlex(column, nowrap, stretch, center);
-                            .choice {
-                                @include m.displayFlex(row, nowrap, space-between, center);
-                            }
-                        }
-                    }
-                    &.grid {
-                        @include m.displayFlex(column, nowrap, center, stretch);
-                        div {
-                            @include m.displayFlex(row, nowrap, stretch, stretch);
-                        }
-                    }
-                }
+            .plyr2 {
+              @include m.displayFlex(column, nowrap, stretch, center);
+              .choice {
+                @include m.displayFlex(row, nowrap, space-between, center);
+              }
             }
-        }
-
-        /* Media Queries */
-        @include m.flippedScreens(41.25rem, 59.375rem, 21.25rem, 28.125rem) {
+          }
+          &.grid {
+            @include m.displayFlex(column, nowrap, center, stretch);
             div {
-                &.cont1 {
-                    @include m.displayFlex(row, wrap, space-between, stretch);
-                }
+              @include m.displayFlex(row, nowrap, stretch, stretch);
             }
+          }
         }
-
-        @include m.padScreens(40.625rem, 68.75rem, 62.5rem) {
-            div {
-                &.cont1 {
-                    @include m.displayFlex(row, wrap, space-between, stretch);
-                }
-            }
-        }
-
-        @include m.wideScreens(62.5rem, 31.25rem) {
-            div {
-                &.cont1 {
-                    @include m.displayFlex(row, wrap, space-between, stretch);
-                }
-            }
-        }
+      }
     }
-    footer {
-        grid-area: ftr;
-        @include m.displayFlex(column, nowrap, stretch, center);
-        div {
-            @include m.displayFlex(row, nowrap, space-around, stretch);
+
+    /* Media Queries */
+    @include m.flippedScreens(41.25rem, 59.375rem, 21.25rem, 28.125rem) {
+      div {
+        &.cont1 {
+          @include m.displayFlex(row, wrap, space-between, stretch);
         }
+      }
     }
+
+    @include m.padScreens(40.625rem, 68.75rem, 62.5rem) {
+      div {
+        &.cont1 {
+          @include m.displayFlex(row, wrap, space-between, stretch);
+        }
+      }
+    }
+
+    @include m.wideScreens(62.5rem, 31.25rem) {
+      div {
+        &.cont1 {
+          @include m.displayFlex(row, wrap, space-between, stretch);
+        }
+      }
+    }
+  }
+  footer {
+    grid-area: ftr;
+    @include m.displayFlex(column, nowrap, stretch, center);
+    div {
+      @include m.displayFlex(row, nowrap, space-around, stretch);
+    }
+  }
 }
