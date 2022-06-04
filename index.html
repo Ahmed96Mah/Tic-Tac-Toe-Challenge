@@ -1,81 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic-Tac-Toe</title>
-    <link rel="stylesheet" href="css/index.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
     <header>
-        <h1>Tic-Tac-Toe Game</h1>
+      <h1>Tic-Tac-Toe Game</h1>
     </header>
     <main>
-        <div class="winner hide">
-            <p>Game Over</p>
+      <div class="winner hide">
+        <p>Game Over</p>
+      </div>
+      <div class="cont1">
+        <p id="turn1" class="turn">It's Player 1's Turn</p>
+        <p id="turn2" class="turn">It's Player 2's Turn</p>
+      </div>
+      <div class="cont2">
+        <div class="grid">
+          <div class="bar hide"></div>
+          <div class="row" id="row1">
+            <div data-cell="1"><div class="content"></div></div>
+            <div class="mid" data-cell="2"><div class="content"></div></div>
+            <div data-cell="3"><div class="content"></div></div>
+          </div>
+          <div class="row" id="row2">
+            <div data-cell="1"><div class="content"></div></div>
+            <div class="mid" data-cell="2"><div class="content"></div></div>
+            <div data-cell="3"><div class="content"></div></div>
+          </div>
+          <div class="row" id="row3">
+            <div data-cell="1"><div class="content"></div></div>
+            <div class="mid" data-cell="2"><div class="content"></div></div>
+            <div data-cell="3"><div class="content"></div></div>
+          </div>
         </div>
-        <div class="cont1">
-            <p id="turn1" class="turn">
-                It's Player 1's Turn
-            </p>
-            <p id="turn2" class="turn">
-                It's Player 2's Turn
-            </p>
-        </div>
-        <div class="cont2">
-            <div class="grid">
-                <div class="bar hide"></div>
-                <div class="row" id="row1">
-                    <div data-cell="1"> <div class="content"></div> </div>
-                    <div class="mid" data-cell="2"> <div class="content"></div> </div>
-                    <div data-cell="3"> <div class="content"></div> </div>
-                </div>
-                <div class="row" id="row2">
-                    <div data-cell="1"> <div class="content"></div> </div>
-                    <div class="mid" data-cell="2"> <div class="content"></div> </div>
-                    <div data-cell="3"> <div class="content"></div> </div>
-                </div>
-                <div class="row" id="row3">
-                    <div data-cell="1"> <div class="content"></div> </div>
-                    <div class="mid" data-cell="2"> <div class="content"></div> </div>
-                    <div data-cell="3"> <div class="content"></div> </div>
-                </div>
+        <div class="plyrs">
+          <div class="plyr1">
+            <p class="plyr">Player 1</p>
+            <p id="count1">0</p>
+            <div id="one" class="choice">
+              <i data-div="one" data-ch="c" class="fa-regular fa-circle"></i>
+              <i data-div="one" data-ch="x" class="fa-solid fa-xmark"></i>
             </div>
-            <div class="plyrs">
-                <div class="plyr1">
-                    <p class="plyr">Player 1</p>
-                    <P id="count1">0</P>
-                    <div id="one" class="choice">
-                        <i data-div="one" data-ch="c" class="fa-regular fa-circle"></i>
-                        <i data-div="one" data-ch="x" class="fa-solid fa-xmark"></i>
-                    </div>
-                </div>
-                <div class="plyr2">
-                    <p class="plyr">Player 2</p>
-                    <P id="count2">0</P>
-                    <div id="two" class="choice">
-                        <i data-div="two" data-ch="c" class="fa-regular fa-circle"></i>
-                        <i data-div="two" data-ch="x" class="fa-solid fa-xmark"></i>
-                    </div>
-                </div>
+          </div>
+          <div class="plyr2">
+            <p class="plyr">Player 2</p>
+            <p id="count2">0</p>
+            <div id="two" class="choice">
+              <i data-div="two" data-ch="c" class="fa-regular fa-circle"></i>
+              <i data-div="two" data-ch="x" class="fa-solid fa-xmark"></i>
             </div>
+          </div>
         </div>
+      </div>
     </main>
     <footer>
-        <p>Created By: Ahmed Mahmoud Abdalwahab</p>
-        <div>
-            <a href="https://web.facebook.com/profile.php?id=100004092701358" target="_blank">
-                <i class="fa-brands fa-facebook-square" id="f"></i>
-            </a>
-            <a href=""><i class="fa-brands fa-instagram" id="i"></i></a>
-            <a href=""><i class="fa-brands fa-twitter" id="t"></i></a>
-            <a href="https://www.linkedin.com/in/ahmed-abd-al-wahab-b177a1140/" target="_blank">
-                <i class="fa-brands fa-linkedin" id="l"></i>
-            </a>
-        </div>
+      <p>Created By: Ahmed Mahmoud Abdalwahab</p>
+      <div>
+        <a
+          href="https://web.facebook.com/profile.php?id=100004092701358"
+          target="_blank"
+        >
+          <i class="fa-brands fa-facebook-square" id="f"></i>
+        </a>
+        <a href=""><i class="fa-brands fa-instagram" id="i"></i></a>
+        <a href=""><i class="fa-brands fa-twitter" id="t"></i></a>
+        <a
+          href="https://www.linkedin.com/in/ahmed-abd-al-wahab-b177a1140/"
+          target="_blank"
+        >
+          <i class="fa-brands fa-linkedin" id="l"></i>
+        </a>
+      </div>
     </footer>
-    <script src="https://kit.fontawesome.com/421675ef65.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/421675ef65.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="dist/app.js"></script>
-</body>
+  </body>
 </html>
