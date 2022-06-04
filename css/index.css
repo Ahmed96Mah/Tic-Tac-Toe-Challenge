@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
 /* Media Queries */
 /* Page Colors */
 header {
@@ -14,7 +14,7 @@ header {
 }
 header h1 {
   color: white;
-  font-family: "Lobster Two", cursive;
+  font-family: 'Lobster Two', cursive;
   text-align: center;
   font-size: 2rem;
   padding-top: 1rem;
@@ -55,14 +55,16 @@ main {
 main div.cont1 {
   width: 100%;
   margin: 1rem 0;
-  font-family: "Alfa Slab One", cursive;
+  font-family: 'Alfa Slab One', cursive;
 }
-main div.cont1 #turn1, main div.cont1 #turn2 {
+main div.cont1 #turn1,
+main div.cont1 #turn2 {
   margin: 0.5rem 0;
   color: darkgray;
   font-size: 1.2rem;
 }
-main div.cont1 #turn1.hglt, main div.cont1 #turn2.hglt {
+main div.cont1 #turn1.hglt,
+main div.cont1 #turn2.hglt {
   color: wheat;
 }
 main div.cont2 {
@@ -71,40 +73,52 @@ main div.cont2 {
 }
 main div.cont2 div.plyrs {
   color: wheat;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   width: 17rem;
 }
-main div.cont2 div.plyrs .plyr1, main div.cont2 div.plyrs .plyr2 {
+main div.cont2 div.plyrs .plyr1,
+main div.cont2 div.plyrs .plyr2 {
   width: 5.5rem;
 }
-main div.cont2 div.plyrs .plyr1 p, main div.cont2 div.plyrs .plyr2 p {
+main div.cont2 div.plyrs .plyr1 p,
+main div.cont2 div.plyrs .plyr2 p {
   font-weight: bold;
 }
-main div.cont2 div.plyrs .plyr1 p#count1, main div.cont2 div.plyrs .plyr1 p#count2, main div.cont2 div.plyrs .plyr2 p#count1, main div.cont2 div.plyrs .plyr2 p#count2 {
+main div.cont2 div.plyrs .plyr1 p#count1,
+main div.cont2 div.plyrs .plyr1 p#count2,
+main div.cont2 div.plyrs .plyr2 p#count1,
+main div.cont2 div.plyrs .plyr2 p#count2 {
   color: white;
 }
-main div.cont2 div.plyrs .plyr1 .choice, main div.cont2 div.plyrs .plyr2 .choice {
+main div.cont2 div.plyrs .plyr1 .choice,
+main div.cont2 div.plyrs .plyr2 .choice {
   width: 100%;
   padding: 0.8rem 0;
 }
-main div.cont2 div.plyrs .plyr1 .choice i, main div.cont2 div.plyrs .plyr2 .choice i {
+main div.cont2 div.plyrs .plyr1 .choice i,
+main div.cont2 div.plyrs .plyr2 .choice i {
   color: white;
   padding: 0.2em;
   cursor: pointer;
 }
-main div.cont2 div.plyrs .plyr1 .choice i.fa-circle, main div.cont2 div.plyrs .plyr2 .choice i.fa-circle {
+main div.cont2 div.plyrs .plyr1 .choice i.fa-circle,
+main div.cont2 div.plyrs .plyr2 .choice i.fa-circle {
   font-size: 1.25rem;
 }
-main div.cont2 div.plyrs .plyr1 .choice i.fa-xmark, main div.cont2 div.plyrs .plyr2 .choice i.fa-xmark {
+main div.cont2 div.plyrs .plyr1 .choice i.fa-xmark,
+main div.cont2 div.plyrs .plyr2 .choice i.fa-xmark {
   font-size: 1.5rem;
 }
-main div.cont2 div.plyrs .plyr1 .choice i.fa-cir, main div.cont2 div.plyrs .plyr2 .choice i.fa-cir {
+main div.cont2 div.plyrs .plyr1 .choice i.fa-cir,
+main div.cont2 div.plyrs .plyr2 .choice i.fa-cir {
   color: #006600;
 }
-main div.cont2 div.plyrs .plyr1 .choice i.fa-x, main div.cont2 div.plyrs .plyr2 .choice i.fa-x {
+main div.cont2 div.plyrs .plyr1 .choice i.fa-x,
+main div.cont2 div.plyrs .plyr2 .choice i.fa-x {
   color: darkred;
 }
-main div.cont2 div.plyrs .plyr1 .choice i.not-allowed, main div.cont2 div.plyrs .plyr2 .choice i.not-allowed {
+main div.cont2 div.plyrs .plyr1 .choice i.not-allowed,
+main div.cont2 div.plyrs .plyr2 .choice i.not-allowed {
   cursor: not-allowed;
 }
 main div.cont2 div.grid {
@@ -214,7 +228,7 @@ main div.cont2 div.grid.hide {
 main div.winner {
   z-index: 1;
   font-size: 2.3rem;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 3rem;
   position: fixed;
   background: linear-gradient(220deg, #000653, #008caf);
@@ -235,7 +249,8 @@ main div.winner.hide {
   main div.cont1 {
     width: 100%;
   }
-  main div.cont1 .turn1, main div.cont1 .turn2 {
+  main div.cont1 .turn1,
+  main div.cont1 .turn2 {
     font-size: 1rem;
   }
   main div.cont2 {
@@ -244,16 +259,20 @@ main div.winner.hide {
   main div.cont2 div.plyrs {
     width: 12rem;
   }
-  main div.cont2 div.plyrs .plyr1, main div.cont2 div.plyrs .plyr2 {
+  main div.cont2 div.plyrs .plyr1,
+  main div.cont2 div.plyrs .plyr2 {
     width: 3.9rem;
   }
-  main div.cont2 div.plyrs .plyr1 p, main div.cont2 div.plyrs .plyr2 p {
+  main div.cont2 div.plyrs .plyr1 p,
+  main div.cont2 div.plyrs .plyr2 p {
     font-size: 1rem;
   }
-  main div.cont2 div.plyrs .plyr1 .choice i.fa-xmark, main div.cont2 div.plyrs .plyr2 .choice i.fa-xmark {
+  main div.cont2 div.plyrs .plyr1 .choice i.fa-xmark,
+  main div.cont2 div.plyrs .plyr2 .choice i.fa-xmark {
     font-size: 1.5rem;
   }
-  main div.cont2 div.plyrs .plyr1 .choice i.fa-circle, main div.cont2 div.plyrs .plyr2 .choice i.fa-circle {
+  main div.cont2 div.plyrs .plyr1 .choice i.fa-circle,
+  main div.cont2 div.plyrs .plyr2 .choice i.fa-circle {
     font-size: 1.25rem;
   }
   main div.cont2 div.grid {
@@ -286,7 +305,8 @@ main div.winner.hide {
   main div.cont1 {
     width: 80%;
   }
-  main div.cont1 .turn1, main div.cont1 .turn2 {
+  main div.cont1 .turn1,
+  main div.cont1 .turn2 {
     font-size: 1.3rem;
   }
   main div.cont2 {
@@ -295,16 +315,20 @@ main div.winner.hide {
   main div.cont2 div.plyrs {
     width: 21rem;
   }
-  main div.cont2 div.plyrs .plyr1, main div.cont2 div.plyrs .plyr2 {
+  main div.cont2 div.plyrs .plyr1,
+  main div.cont2 div.plyrs .plyr2 {
     width: 5rem;
   }
-  main div.cont2 div.plyrs .plyr1 p, main div.cont2 div.plyrs .plyr2 p {
+  main div.cont2 div.plyrs .plyr1 p,
+  main div.cont2 div.plyrs .plyr2 p {
     font-size: 1.3rem;
   }
-  main div.cont2 div.plyrs .plyr1 .choice i.fa-xmark, main div.cont2 div.plyrs .plyr2 .choice i.fa-xmark {
+  main div.cont2 div.plyrs .plyr1 .choice i.fa-xmark,
+  main div.cont2 div.plyrs .plyr2 .choice i.fa-xmark {
     font-size: 1.8rem;
   }
-  main div.cont2 div.plyrs .plyr1 .choice i.fa-circle, main div.cont2 div.plyrs .plyr2 .choice i.fa-circle {
+  main div.cont2 div.plyrs .plyr1 .choice i.fa-circle,
+  main div.cont2 div.plyrs .plyr2 .choice i.fa-circle {
     font-size: 1.55rem;
   }
   main div.cont2 div.grid {
@@ -337,7 +361,8 @@ main div.winner.hide {
   main div.cont1 {
     width: 80%;
   }
-  main div.cont1 .turn1, main div.cont1 .turn2 {
+  main div.cont1 .turn1,
+  main div.cont1 .turn2 {
     font-size: 1.6rem;
   }
   main div.cont2 {
@@ -346,16 +371,20 @@ main div.winner.hide {
   main div.cont2 div.plyrs {
     width: 27rem;
   }
-  main div.cont2 div.plyrs .plyr1, main div.cont2 div.plyrs .plyr2 {
+  main div.cont2 div.plyrs .plyr1,
+  main div.cont2 div.plyrs .plyr2 {
     width: 6rem;
   }
-  main div.cont2 div.plyrs .plyr1 p, main div.cont2 div.plyrs .plyr2 p {
+  main div.cont2 div.plyrs .plyr1 p,
+  main div.cont2 div.plyrs .plyr2 p {
     font-size: 1.6rem;
   }
-  main div.cont2 div.plyrs .plyr1 .choice i.fa-xmark, main div.cont2 div.plyrs .plyr2 .choice i.fa-xmark {
+  main div.cont2 div.plyrs .plyr1 .choice i.fa-xmark,
+  main div.cont2 div.plyrs .plyr2 .choice i.fa-xmark {
     font-size: 2.1rem;
   }
-  main div.cont2 div.plyrs .plyr1 .choice i.fa-circle, main div.cont2 div.plyrs .plyr2 .choice i.fa-circle {
+  main div.cont2 div.plyrs .plyr1 .choice i.fa-circle,
+  main div.cont2 div.plyrs .plyr2 .choice i.fa-circle {
     font-size: 1.85rem;
   }
   main div.cont2 div.grid {
@@ -387,7 +416,8 @@ main div.winner.hide {
   main div.cont1 {
     width: 60%;
   }
-  main div.cont1 .turn1, main div.cont1 .turn2 {
+  main div.cont1 .turn1,
+  main div.cont1 .turn2 {
     font-size: 1.75rem;
   }
   main div.cont2 {
@@ -396,16 +426,20 @@ main div.winner.hide {
   main div.cont2 div.plyrs {
     width: 30rem;
   }
-  main div.cont2 div.plyrs .plyr1, main div.cont2 div.plyrs .plyr2 {
+  main div.cont2 div.plyrs .plyr1,
+  main div.cont2 div.plyrs .plyr2 {
     width: 8rem;
   }
-  main div.cont2 div.plyrs .plyr1 p, main div.cont2 div.plyrs .plyr2 p {
+  main div.cont2 div.plyrs .plyr1 p,
+  main div.cont2 div.plyrs .plyr2 p {
     font-size: 1.75rem;
   }
-  main div.cont2 div.plyrs .plyr1 .choice i.fa-xmark, main div.cont2 div.plyrs .plyr2 .choice i.fa-xmark {
+  main div.cont2 div.plyrs .plyr1 .choice i.fa-xmark,
+  main div.cont2 div.plyrs .plyr2 .choice i.fa-xmark {
     font-size: 2.25rem;
   }
-  main div.cont2 div.plyrs .plyr1 .choice i.fa-circle, main div.cont2 div.plyrs .plyr2 .choice i.fa-circle {
+  main div.cont2 div.plyrs .plyr1 .choice i.fa-circle,
+  main div.cont2 div.plyrs .plyr2 .choice i.fa-circle {
     font-size: 2rem;
   }
   main div.cont2 div.grid {
@@ -442,7 +476,7 @@ footer {
 }
 footer p {
   font-size: 1.2rem;
-  font-family: "Lobster Two", cursive;
+  font-family: 'Lobster Two', cursive;
 }
 footer div {
   width: 20rem;
@@ -512,7 +546,7 @@ body {
   display: grid;
   grid-template-rows: repeat(3, auto);
   grid-template-columns: 1fr;
-  grid-template-areas: "hdr" "mn" "ftr";
+  grid-template-areas: 'hdr' 'mn' 'ftr';
   gap: 1rem;
 }
 body header {
